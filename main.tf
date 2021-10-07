@@ -1,15 +1,11 @@
 terraform {
   required_version = ">=0.13"
-  required_providers {
-    aws = {
-      source = "hashicorp/aws"
-      version = "3.59.0"
-    }
-  }
 }
 
 provider "aws1" {
   region = "us-east-1"
+  source = "hashicorp/aws"
+  version = "3.59.0"
 }
 resource "aws_instance" "testVMFV" {
   ami = data.aws_ami.amazon-linux2.image_id
