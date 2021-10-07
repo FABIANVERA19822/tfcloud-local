@@ -7,6 +7,10 @@ terraform {
     }
   }
 }
+
+provider "aws1" {
+  region = "us-east-1"
+}
 resource "aws_instance" "testVMFV" {
   ami = data.aws_ami.amazon-linux2.image_id
   instance_type = "t2.micro"
