@@ -2,9 +2,9 @@ terraform {
   required_version = ">=0.13"
 }
 
-provider "aws1" {
+provider "aws" {
   region = "us-east-1"
-  version = "3.59.0"
+  version = "3.61.0"
 }
 resource "aws_instance" "testVMFV" {
   ami = data.aws_ami.amazon-linux2.image_id
